@@ -1,4 +1,7 @@
-import { User, Album, Picture, PhotoOrientation } from './photo-app';
+import Album from './album';
+import Picture from './picture';
+import User from './user';
+import { PhotoOrientation } from './photo-orientation';
 
 const user = new User(1, 'luisfloresdev', 'Luis', true);
 const album = new Album(10, 'Platzi Pictures');
@@ -10,4 +13,6 @@ const picture = new Picture(
 );
 user.addAlbum(album);
 album.addPicture(picture);
+console.log('User:', user);
+user.removeAlbum(album);
 console.log('User:', user);
